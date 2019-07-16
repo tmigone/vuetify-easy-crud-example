@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "vuetify-easy-crud",
+  "alias": [ "vuetify-easy-crud" ],
+  "scope": "tmigone",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ]
+}
