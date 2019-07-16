@@ -1,29 +1,18 @@
 # vuetify-easy-crud-example
 
-## Project setup
+To run this project locally:
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
+To build it for production: 
 ```
+npm install
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
+Live demo: [https://vuetify-easy-crud.now.sh/](https://vuetify-easy-crud.now.sh/)
+See library documentation: [vuetify-easy-crud](https://github.com/tomasmigone/vuetify-easy-crud).
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
