@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <!-- Toolbar -->
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
         <span>DEMO</span>
@@ -7,16 +8,18 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn flat href="https://github.com/tomasmigone/vuetify-easy-crud" target="_blank">
-        <span class="mr-2">See repo on GitHub</span>
+        <span class="mr-2">GitHub</span>
         <v-icon>open_in_new</v-icon>
       </v-btn>
     </v-toolbar>
 
+    <!-- Content -->
     <v-content>
+      <!-- VecTable -->
       <vec-table
-        :title="'This are some good players '"
+        :title="'vec-table'"
         :items="players"
-        :headers="tableHeaders"
+        :headers="vecHeaders"
         @add-item="addPlayer"
         @update-item="updatePlayer"
         @delete-item="deletePlayer"
@@ -31,6 +34,16 @@
           <update-form :item="props.item"></update-form>
         </template>
       </vec-table>
+
+      <!-- VexTable -->
+      <vex-table :module="'players'" :title="'vex-table'" :headers="vexHeaders">
+        <template v-slot:create-form="props">
+          <create-form></create-form>
+        </template>
+        <template v-slot:update-form="props">
+          <update-form :item="props.item"></update-form>
+        </template>
+      </vex-table>
     </v-content>
   </v-app>
 </template>
@@ -45,7 +58,15 @@ export default {
   components: { ListView, CreateForm, UpdateForm },
   data: () => {
     return {
-      tableHeaders: [
+      vecHeaders: [
+        { text: 'Name', value: 'name' },
+        'Surname (not searchable)',
+        { text: 'Age', value: 'age', sortable: true },
+        { text: 'Country', value: 'country' },
+        { text: 'Club', value: 'club', sortable: true }
+      ],
+      vexHeaders: [
+        { text: 'ID', value: 'id' },
         { text: 'Name', value: 'name' },
         'Surname (not searchable)',
         { text: 'Age', value: 'age', sortable: true },

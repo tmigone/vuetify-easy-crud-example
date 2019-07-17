@@ -45,7 +45,9 @@
 </template>
 
 <script>
-import { VecFormMixin } from '@tmigone/vuetify-easy-crud'
+// import { VecFormMixin } from '@tmigone/vuetify-easy-crud'
+import { VecFormMixin } from '../../../vuetify-easy-crud/dist/vuetify-easy-crud.common.js'
+
 
 export default {
   mixins: [ VecFormMixin ]

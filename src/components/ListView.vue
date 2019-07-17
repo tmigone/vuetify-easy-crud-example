@@ -1,9 +1,9 @@
 <template>
   <vec-fragment>
     <td>{{ item.name }}</td>
-    <td>{{ item.surname }}</td>
+    <td>{{ item.surname.toUpperCase() }}</td>
     <td>{{ item.age }}</td>
-    <td>{{ item.country }}</td>
+    <td><b>{{ item.country }}</b></td>
     <td>{{ item.club }}</td>
   </vec-fragment>
 </template>
