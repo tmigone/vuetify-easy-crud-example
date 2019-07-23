@@ -17,7 +17,7 @@
     <v-content>
       <!-- VecTable -->
       <vec-table
-        :title="'vec-table'"
+        title="vec-table"
         :items="players"
         :headers="vecHeaders"
         @add-item="addPlayer"
@@ -36,7 +36,7 @@
       </vec-table>
 
       <!-- VexTable -->
-      <vex-table :module="'players'" :title="'vex-table'" :headers="vexHeaders">
+      <vex-table module="players" title="vex-table" :headers="vexHeaders">
         <template v-slot:create-form="props">
           <create-form></create-form>
         </template>
@@ -44,6 +44,18 @@
           <update-form :item="props.item"></update-form>
         </template>
       </vex-table>
+
+      <!-- VefTable -->
+      <vef-table module="playersFirestore" title="vef-table" :headers="vexHeaders">
+        <template v-slot:create-form="props">
+          <create-form></create-form>
+        </template>
+        <template v-slot:update-form="props">
+          <update-form :item="props.item"></update-form>
+        </template>
+      </vef-table>
+
+
     </v-content>
   </v-app>
 </template>
@@ -68,7 +80,7 @@ export default {
       vexHeaders: [
         { text: 'ID', value: 'id' },
         { text: 'Name', value: 'name' },
-        'Surname (not searchable)',
+        'Surname (not shown)',
         { text: 'Age', value: 'age', sortable: true },
         { text: 'Country', value: 'country' },
         { text: 'Club', value: 'club', sortable: true }

@@ -13,8 +13,8 @@ const mutations = {
   updateMutation: (state, player) => {
     state.players = state.players.map(i => i.id === player.id ? player : i)
   },
-  deleteMutation: (state, player) => {
-    state.players = state.players.filter(i => i.id !== player.id)
+  deleteMutation: (state, id) => {
+    state.players = state.players.filter(i => i.id !== id)
   }
 }
 

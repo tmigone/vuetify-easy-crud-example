@@ -11,9 +11,11 @@
   "dependencies": {
     "@tmigone/vuetify-easy-crud": "^1.5.0",
     "core-js": "^2.6.5",
+    "firebase": "^6.3.1",
     "vue": "^2.6.10",
     "vuetify": "^1.5.16",
-    "vuex": "^3.1.1"
+    "vuex": "^3.1.1",
+    "vuex-easy-firestore": "^1.34.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
